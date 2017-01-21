@@ -21,8 +21,12 @@ how to compile to
   - babel-traverse
   - babel-generator
 
+The compiler can be broken down into 3 parts:
 
-
+  - The parser: babylon
+  - The transformer[s]: All the plugins/presets
+  - These all use babel-traverse to traverse through the AST
+  The generator: babel-generator
 ### babel flow
 The flow looks like this:
 > input string -> parser (babylon) -> AST -> transform (babel-core) -> AST ->  babel-generator -> output string
