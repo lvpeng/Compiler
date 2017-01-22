@@ -32,4 +32,6 @@ The flow looks like this:
 > input string -> parser (babylon) -> AST -> transform (babel-core) -> AST ->  babel-generator -> output string
 
 ### babel-core是Babel的最核心package，相当于Babel的大心脏，负责对ES2015代码进行编译环节:
+- index.js -> module.exports = require('./lib/api/node.js')
 - 向外暴露了babel.transform方法
+-
